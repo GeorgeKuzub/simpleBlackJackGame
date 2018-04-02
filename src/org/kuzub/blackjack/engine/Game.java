@@ -15,19 +15,6 @@ public class Game {
                 new Player("Realist", new RealisticStrategy()),
                 new Player("RiskyPlayer", new RiskyStrategy()),
                 new Player("DumbPlayer", new DumbStrategy()),
-
-                new Player("Cheater", new OptimisticStrategy()) {
-                    @Override
-                    public int getValuePocketCards() {
-                        return 21;
-                    }
-
-                    public void someAdditionalMethod() {
-                        System.out.println(getValuePocketCards());
-                    }
-
-                }
-
         };
 
         Table table1 = new Table("MagicTable", players);
