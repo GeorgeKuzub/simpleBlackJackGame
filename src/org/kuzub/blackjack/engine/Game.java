@@ -8,20 +8,22 @@ public class Game {
     StatisticService statisticService = StatisticService.getInstance();
 
     public static void startBattle() {
-        Player[] players = {
+        Player[] players = new Player[]{
+                new Player("SillyPlayer", new SillyStrategy()),
+                new Player("MisterIncognito",
+                        new Strategy() {
+                            @Override
+                            public boolean hasEnoughValue(int value) {
+                                return value >= 10;
+                            }
+                        }),
+
                 new Player("PussyPlayer", new PussyStrategy()),
-                new Player("Pessimist", new PessimistStrategy()),
-                new Player("Optimist", new OptimisticStrategy()),
-                new Player("Realist", new RealisticStrategy()),
-                new Player("RiskyPlayer", new RiskyStrategy()),
-                new Player("DumbPlayer", new DumbStrategy()),
-//                new Player("MisterIncognito",
-//                        new Strategy() {
-//                            @Override
-//                            public boolean hasEnoughValue(int value) {
-//                                return  value < 10? false: true;
-//                            }
-//                        })
+//                new Player("Pessimist", new PessimistStrategy()),
+//                new Player("Optimist", new OptimisticStrategy()),
+//                new Player("Realist", new RealisticStrategy()),
+//                new Player("RiskyPlayer", new RiskyStrategy())
+
         };
 
         Table table1 = new Table("MagicTable", players);
