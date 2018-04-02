@@ -131,6 +131,10 @@ public class Table {
         } else if (counterLosers > 0) {
 
             for (Player plr : losers) {
+                if (plr == null) {
+                    break;
+                }
+
                 int pocketValue = plr.getValuePocketCards();
 
                 if (pocketValue < MAX_VALUE) {

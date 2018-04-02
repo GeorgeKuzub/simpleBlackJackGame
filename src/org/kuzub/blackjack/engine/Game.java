@@ -15,6 +15,13 @@ public class Game {
                 new Player("Realist", new RealisticStrategy()),
                 new Player("RiskyPlayer", new RiskyStrategy()),
                 new Player("DumbPlayer", new DumbStrategy()),
+//                new Player("MisterIncognito",
+//                        new Strategy() {
+//                            @Override
+//                            public boolean hasEnoughValue(int value) {
+//                                return  value < 10? false: true;
+//                            }
+//                        })
         };
 
         Table table1 = new Table("MagicTable", players);
