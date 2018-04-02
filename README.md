@@ -1,4 +1,4 @@
-# simpleBlackJackGame
+# Simple *BlackJack* Game
 Simple Black Jack Game based on Java7 and is used only arrays.
 
 Основные правила и ограничения:
